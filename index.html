@@ -21,6 +21,146 @@
     <link href="css/grayscale.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/commonstyle.css" />
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".section ul li .rsp").hide();
+            $(".section	 ul li").hover(function() {
+                    $(this).find(".rsp").stop().fadeTo(500, 0.5)
+                    $(this).find(".text").stop().animate({
+                        left: '0'
+                    }, {
+                        duration: 500
+                    })
+                },
+                function() {
+                    $(this).find(".rsp").stop().fadeTo(500, 0)
+                    $(this).find(".text").stop().animate({
+                        left: '300'
+                    }, {
+                        duration: "fast"
+                    })
+                    $(this).find(".text").animate({
+                        left: '-300'
+                    }, {
+                        duration: 0
+                    })
+                });
+        });
+    </script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        a,
+        img {
+            border: 0;
+        }
+        
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        
+        .clearfix {
+            display: inline-table;
+        }
+        /* Hides from IE-mac \*/
+        
+        *html .clearfix {
+            height: 1%;
+        }
+        
+        .clearfix {
+            display: block;
+        }
+        /* End hide from IE-mac */
+        
+        *+html .clearfix {
+            min-height: 1%;
+        }
+        /* section */
+        
+        .section {
+            width: 60rem;
+            margin-left: 22.5%;
+            overflow: hidden;
+        }
+        
+        .section ul {
+            width: 90rem;
+        }
+        
+        .section ul li {
+            float: left;
+            margin-left: 1.2rem;
+            margin-bottom: auto;
+            display: inline;
+            width: 12rem;
+            height: 10.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .section ul li .photo {
+            width: 12.5rem;
+            height: 10em;
+            overflow: hidden;
+        }
+        
+        .section .rsp {
+            width: 18rem;
+            height: 12rem;
+            overflow: hidden;
+            position: absolute;
+            background: rgb(0, 0, 0);
+            top: 0rem;
+            left: 0rem;
+        }
+        
+        .section .text {
+            position: absolute;
+            width: 18rem;
+            height: 13.5rem;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+        }
+        
+        .section .text h3 {
+            width: 1rem;
+            margin-top: 2rem;
+            margin-left: 0;
+            height: auto;
+            line-height: 1.5rem;
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 0.6rem;
+        }
+        
+        .section .text a {
+            text-decoration: none
+        }
+        
+        .section .text div {
+            width: 10rem;
+            margin-top: 1rem;
+            text-align: justify;
+            margin-left: -5.5rem;
+            margin-right: 0.5rem;
+            color: #ffffff;
+            font-size: 0.5rem;
+            font-family: monospace;
+            font-weight: bold 900;
+        }
+    </style>
 
 </head>
 
@@ -38,12 +178,12 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">
-                            <font size="5">误诊篇</font>
+                            <font size="5rem">误诊篇</font>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#im">
-                            <font size="5">药篇</font>
+                        <a class="nav-link js-scroll-trigger" href="#ab">
+                            <font size="5rem">药篇</font>
                         </a>
                     </li>
                 </ul>
@@ -56,84 +196,75 @@
         <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center">
                 <p style="text-align:center">
-                    <font size="8"><b>&nbsp;</b></font>
+                    <font size="8rem"><b>&nbsp;</b></font>
                 </p>
                 <p style="text-align:center">
-                    <font size="16" color="white"><b>中国罕见病患者的绝地求生：
+                    <font size="16rem" color="white"><b>中国罕见病患者的绝地求生：
                                 <h4></h4>N次误诊，数度缺药</b></font>
                 </p>
-                <p>
-                    <font size="8">&nbsp;</font>
-                </p>
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div style="text-align:justify;">
-                                <p class="text-white align-left ">
-                                    罕见病进入中国已有数十年，近几年开始得到人们的广泛关注，今年尤其是带给中国罕见病患者无限希望的一年，长期笼罩在患者头上的两朵阴云有了消散的迹象。
-                                </p>
-                                <p class="text-white align-left">但罕见病依旧是人类医学面临的最大挑战之一，至今没有治愈成功的案例。中国罕见病患者的治愈之路还很长，需要政府、组织、企业、个人以及患者自身的持续关注与努力。</p>
-                            </div>>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
     <!-- About Section -->
-    <section id="about" class="about-section text-center">
+    <section class="about-section text-center">
     </section>
     </h2>
     </h2>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">2018年5月，国家卫生健康委员会、科技部、工业和信息化部、国家药品监督管理局、国家中医药管理局等五部门联合发布了《第一批罕见病目录》，共有121种罕见病被收入这个可扩容的目录中。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">今年2月，与上述121罕见病配套使用的《罕见病诊疗指南（2019年版）》也随之发布。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">对我国罕见病患者来说，两份文件代表的是求生的希望；对普通人来说，这是认识罕见病的绝佳窗口。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">121种罕见病，发病率不过千分之一、万分之一，诊疗时却要动辄同X种症状相近的疾病区别开来。这两个特点注定了罕见病患者的诊疗之路要比普通人艰难得多。</div>
-                    </p>
-                </div>
-            </div>
+    <div align="center">
+        <div style="text-align:justify;width:46%;margin:auto;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">蝴蝶宝宝、月亮孩子、瓷娃娃、蓝嘴唇……这些美丽的名字背后都是一个又一个被罕见病折磨的病人。罕见病，指发病率很低的一类疾病，往往是慢性的、严重的，甚至危及生命的。目前国际确认的罕见病有<b>7000多种</b>，我国有<b>超过1600万</b>名罕见病患者，但只有<b>不到5%</b>的罕见病有治疗方法。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin: auto;">根据《2018年中国罕见病调研报告》，我国有近<b>65%</b>的罕见病患者都曾被误诊过，诊断一个罕见病病人的时间平均长达<b>5.3年</b>，约<b>四分之三</b>的患者平均奔波了<b>4.5家</b>医院才被确诊。确诊后，用药难又是另一大问题。在中国第一批罕见病目录中的121种罕见疾病中，有<b>47种</b>罕见病目前“无药可医”，在“有药可治”的74罕见病中仍有<b>9种</b>罕见病的药物在我国境内无药，而在中国上市且有罕见病适应症的药物中有<b>13种</b>罕见病缺乏医保支付，这13种罕见病在我国约影响<b>23万</b>名患者，其中有些病年治疗费用高达近<b>500万元</b>。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin:auto;">“确诊难”、“用药难”是长期笼罩在罕见病患者头上的两朵乌云，难以消散。</div>
+                </p>
+            </font>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div style="text-align:justify;">
-                    <div style="width:100%;height: 60px; margin:auto">
-                        <div style="float: left;margin:auto">
-                            <table style="height:45px;border-color:slategray;border-left-style:solid;border-width:8px">
-                                <tr>
-                                    <td valign="top"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div style="float: letf;margin:20px auto;height: 45px;">
-                            <p class="text-black align-left ">
-                                <font size="5">&nbsp;确诊时间长、历程艰辛</font>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div align="center">
+        <div style="text-align:justify;width:46%;margin:auto;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">罕见病，是指发病率很低的疾病，罕见病病情一般较为严重、诊断治疗复杂。包括渐冻症、玻璃人（血友病）、罕小胖（小胖威力）、蓝嘴唇（肺动脉高压）等。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">2018年5月，国家卫生健康委员会、科技部、工业和信息化部、国家药品监督管理局、国家中医药管理局等五部门联合发布了《第一批罕见病目录》，共有121种罕见病被收入这个可扩容的目录中。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin: auto;">今年2月，与上述121罕见病配套使用的《罕见病诊疗指南（2019年版）》也随之发布。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin:auto;">对我国罕见病患者来说，两份文件代表的是求生的希望；对普通人来说，这是认识罕见病的绝佳窗口。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin:auto;">罕见病患者面临着诸多困难。<b>如果罕见病病人要把自己患病后所经历的绝望和希望写成回忆录，那么上篇的标题便是那些年看不懂我的医生，下篇的标题是那些年我得不到的药。</b></div>
+                </p>
+            </font>
         </div>
     </div>
-    <h1></h1>
-    <p style="text-align:center">
-        <font size="4"><b>单个罕见病被误诊情况</font></b>
-    </p>
-    <div class="container align-items-center">
-
-        <body style="height: 600%; margin: 0">
+    <div id="about" align="center">
+        <font face="宋体" size="10rem">
+            <p style="padding-top: 4rem;">
+                <b>误诊篇</b>
+            </p>
+        </font>
+        <div style="width:12%; border:3px solid rgb(228, 77, 7);"></div>
+    </div>
+    <div align="center">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">根据《2018年中国罕见病调研报告》，我国有近65%的罕见病患都曾被误诊过，有罕见病本身发病率极低、临床病例少，且发病的不同阶段表症有一定差异，就导致罕见病的鉴别及其困难，患者经常会被误诊成具有相似症状表现的普通病。其中，法布雷病被误诊人数最高可达没有被误诊过人数的15倍。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center">
+        <div style="width:46%;height:100%">
             <div id="container2" style="height: 600%"></div>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
@@ -141,15 +272,30 @@
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+            <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
             <script type="text/javascript">
                 var dom = document.getElementById("container2");
-                var myChart2 = echarts.init(dom);
+                var myChart = echarts.init(dom);
                 var app = {};
+                option = null;
                 option = null;
                 app.title = '堆叠条形图';
 
                 option = {
+                    title: [{
+                        text: '单个罕见病被误诊情况',
+                        top: '1%',
+                        x: 'center',
+                    }, {
+                        subtext: '数据来源：病痛挑战基金会 《2018罕见病调研报告》',
+                        bottom: '3%',
+                        x: 'center',
+                        subtextStyle: {
+                            color: '#757777'
+                        },
+                    }, ],
+
                     color: ['#f4956c', '#757777'],
                     backgroundColor: ['#ffffff'],
                     tooltip: {
@@ -159,7 +305,7 @@
                         }
                     },
                     legend: {
-                        x: '69.5%',
+                        right: '3%',
                         data: ['未被误诊过人数', '曾被误诊过人数'],
                         top: '75%',
                         itemWidth: 14,
@@ -167,10 +313,10 @@
                         orient: 'vertical',
                     },
                     grid: {
-                        left: '15%',
-                        right: '19%',
-                        top: '3%',
-                        bottom: '3%',
+                        left: '3%',
+                        right: '3%',
+                        top: '10%',
+                        bottom: '10%',
 
                         containLabel: true
                     },
@@ -208,243 +354,407 @@
                     ]
                 };;
                 if (option && typeof option === "object") {
-                    myChart2.setOption(option, true);
+                    myChart.setOption(option, true);
                 }
             </script>
-        </body>
+        </div>
     </div>
-    <p style="text-align:center">
-        <font size="3" color="#C4C4C4" face="微软雅黑">数据来源：病痛挑战基金会 《2018罕见病调研报告》</font>
-    </p>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">只有57.4%的患者能够在当年被确诊，其余42.6%的患者人均需要花费5.3年的时间才能够被确诊。</div>
-                    </p>
-                    <h3></h3>
-                    <p class="text-black align-left">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">只有大约四分之一的“幸运儿”确诊只需要经历一家医院，其余约四分之三的患者平均需要经历4.5家医院。部分患者表示自己经历了20多家医院才获得确诊，还有部分患者表示自己去过的医院已经多得数不清了。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">该调查还指出，由于罕见病的表现复杂，往往会有多个器官和系统同时出现问题，因而很难一开始就找对科室、刚好遇到能够确诊的专家。从整体上看，患者需经过4个科室才能被确诊。</div>
-                    </p>
-                </div>
+    <div align="center">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">只有57.4%的患者能够在当年被确诊，诊断一个罕见病病人的时间平均长达5.3年。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">只有大约四分之一的“幸运儿”确诊只需要经历一家医院，其余约<b>四分之三</b>的患者平均需要经历<b>4.5家</b>医院。部分患者表示自己经历了<b>20多家</b>医院才获得确诊，还有部分患者表示自己去过的医院已经多得数不清了。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin: auto;">并且，由于罕见病的表现复杂，往往会有多个器官和系统同时出现问题，因而很难一开始就找对科室、刚好遇到能够确诊的专家。从整体上看，患者平均需经过<b>4个科室</b>才能被确诊。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center">
+        <div style="width:49.8%;height: 34%;">
+            <img src="img/12345.jpg" width="100%" height="100%" /></img>
+        </div>
+    </div>
+    <div align="center">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">然而，对很多罕见病患者来说，他们脆弱的生命根本经不起这5年多误诊时光的蹉跎，长时间的误诊过程对他们来说意味的是高昂的试错成本，错误的治疗方案以及病情的不断恶化甚至死亡。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;"><b>85%-90%</b>的罕见病对患者有生命威胁，<b>50%</b>的罕见病患者在儿童时期发病，<b>30%的罕见病患者在5岁前便离开人世。</b></div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin: auto;">对于在成年后发病的罕见病，拿“渐冻人”症来说，40%左右的患者在发作后只能<b>存活3年</b>，一般患者在发作<b>2-5年</b>后就会呼吸麻痹、引起肺部感染之后，导致死亡。“冰桶挑战”发起人皮特·弗雷茨于2012年被诊断为“渐冻人症”，2014年他发起“冰桶挑战”，5年后，也就是2019年的12月9日，弗雷茨离世，年仅34岁。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:1.6rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">罕见病“罕见”</font>
+                </p>
             </div>
         </div>
     </div>
-    <p style="text-align:center">
-        <font size="4"><b>罕见病患者确诊所需时间情况</font></b>
-    </p>
-    <div style="text-align:center "><img src="img/12345.jpg" width="1250 " height="518" /></div>
-    <p style="text-align:center ">
-        <font size="3 " color="#C4C4C4 " face="微软雅黑 ">数据来源:病痛挑战基金会《2018罕见病调研报告》</font>
-    </p>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">当确诊后的罕见病患者回顾自己确诊中走过的弯路时，多会遗憾自己当初没有遇到对这种病非常了解的医生。普通的医生都是先按照常见病来理解，先按常见病来治疗，等一次次的常规治疗失效后，才能够察觉出疾病的特殊性。</div>
-                    </p>
-                </div>
-            </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">罕见病诊断率低、误诊情况高发的直接原因在于罕见病自身的“罕见”属性。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">罕见病的定义是一个相对概念，在时间的维度里是可变的、可被重新定义的社会认知。<b>决定罕见病定义的是它的患病率，即某特定时间总人口中患有某种疾病的人口所占的比例</b>，因此，不同国家和地区对罕见病的定义存在差异。</b>
+                    </div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:2px;margin: auto;">目前，部分国家和地区对罕见病的定义如下： </div>
+                </p>
+            </font>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div style="text-align:justify;">
-                    <div style="width:100%;height: 60px; margin:auto">
-                        <div style="float: left;margin:auto">
-                            <table style="height:45px;border-color:slategray;border-left-style:solid;border-width:8px">
-                                <tr>
-                                    <td valign="top"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div style="float: letf;margin:20px auto;height: 45px;">
-                            <p class="text-black align-left ">
-                                <font size="5">&nbsp;医生罕见病诊治水平普遍不足</font>
-                            </p>
+
+
+
+    <div align="center">
+        <div class="section">
+            <ul class="clearfix">
+                <li>
+                    <div class="photo"><img src="img/美国4：3.jpg" width="100%" height="100%" /></div>
+                    <div class="rsp">
+                        <div class="text">
+                            <a href="">
+                                <div style="width: 11rem;margin-left: -5rem;">美国2002年通过《罕见病法案》将罕见病定义为在美国患病人数低于20万人的疾病。美国目前约有2,500~3,000万罕见病患者，其中一半以上是儿童。</div>
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <div class="photo"><img src="img/欧盟4：3.jpg" width="100%" height="100%" /></div>
+                    <div class="rsp">
+                        <div class="text">
+                            <a href="">
+                                <div>欧盟对罕见病的定义是患病率低于1/2,000的慢性、渐进性且危及生命的疾病。欧洲目前约有2,400万~3,600万罕见病患者，占欧盟25国总人口的6%~8%。 </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo"><img src="img/日本4：3.jpg" width="100%" height="100%" /></div>
+                    <div class="rsp">
+                        <div class="text">
+                            <a href="">
+
+                                <div>
+                                    日本对于罕见病的法律定义为在日本患病人数低于5万人，或患病率低于1/2,500的疾病。
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="section">
+            <ul class="clearfix">
+                <li>
+                    <div class="photo"><img src="img/中国台湾4：3.jpg" width="100%" height="100%" /></div>
+                    <div class="rsp">
+                        <div class="text">
+                            <a href="">
+                                <div>我国台湾地区2000年通过《罕见疾病防治及药物法》将罕见疾病定义为盛行率在万分之一以下，或在特殊情况下经“卫生署”认定并公告的疾病。 </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo"><img src="img/菲律宾4：3.jpg" width="100%" height="100%" /></div>
+                    <div class="rsp">
+                        <div class="text">
+                            <a href="">
+                                <div>2015年9月，菲律宾罕见病法案出台，该法案对罕见病定义为：罕见病是指遗传代谢紊乱和其他类似的患病率小于1/20,000的疾病。这些疾病需要经菲律宾国家卫生研究所的推荐并需要对菲律宾卫生部认定。</div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo"><img src="img/俄罗斯4：3.jpg" width="100%" height="100%" /></div>
+                    <div class="rsp">
+                        <div class="text">
+                            <a href="">
+                                <div>俄罗斯对于罕见病的定义是患病率低于千分之一的疾病。2011年11月21日出台的联邦法律中明确提出要对遭受罕见病的俄罗斯联邦居民进行医疗方面的关注。</div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
         </div>
     </div>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">从2018年病痛挑战基金会的调研结果来看，尽管受访医生的学历、职称、行医年数、甚至所工作医院的等级都远超中国医生的普遍水平，仍有33.3%的医生承认自己只是听说过罕见病，但不太了解;甚至有1.1%的医生从未听说过罕见病。接诊过罕见病的159位医生，也主要集中在接诊了 1-20 个罕见病病人的区域，占所有 196 位医生的 50.5%。其中还有22人未给予病人治疗，治疗过罕见病人的医生也有近48%的人 仅治疗过1-5个病人。</div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <p style="text-align:center ">
-        <font size="4 "><b>受访医生对罕见病的了解程度自评结果&emsp;&emsp;&emsp;受访医生2017年接诊罕见病的数量</font></b>
-    </p>
+
     <div align="center">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">欧盟、日本、俄罗斯对罕见病患病率的定义分别为<b>小于1/2,000、1/2,500、1/1000，</b>中国并没有明确的罕见病法律释义，据中华医学会医学遗传学分会专家在2010年上海举办的中国罕见病定义专家研讨会上提出的建议，我国的罕见病定义的患病率小于1/500,000。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">患病率极低、患者人数少、人群分散，诊疗时却要动辄同X种症状相近的疾病区别开来，这些罕见病自身的特点注定了罕见病的鉴别极其困难，导致患者的确诊之路要比普通人艰难得多。</b>
+                    </div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:1.6rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">会治罕见病的医生比罕见病“更罕见”</font>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">当确诊后的罕见病患者回顾自己确诊中走过的弯路时，多会遗憾自己当初没有遇到对这种病非常了解的医生。普通的医生都是先按照常见病来理解，先按常见病来治疗，等一次次的常规治疗失效后，才能够察觉出疾病的特殊性。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">在罕见病领域，会治罕见病的医生比罕见病还要罕见。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">从2018年病痛挑战基金会的调研结果来看，尽管受访医生的学历、职称、行医年数、甚至所工作医院的等级普遍偏高，仍有33.3%的医生承认自己只是听说过罕见病，但不太了解;甚至有1.1%的医生从未听说过罕见病。接诊过罕见病的159位医生，也主要集中在接诊了 1-20 个罕见病病人的区域，占所有 196 位医生的 50.5%。其中还有22人未给予病人治疗，治疗过罕见病人的医生也有近48%的人仅治疗过1-5个病人。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center">
+        <div style="width:49.8%;height: 34%;">
+            <img src="img/诊疗.jpg" width="100%" height="100%" /></img>
+        </div>
+    </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">医务人员对罕见病认知程度低的情况，不能归因于医生的业务水平差。对绝大多数医生而言，罕见病病种多、发病率低、患者分布不集中，临床机会少，才导致没有足够的病例让他们学会如何诊断、治疗罕见病。 </div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:1.6rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">建立数据库变“罕见”为“不罕见”</font>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">提高医生的罕见病诊断能力，为临床工作者提高必要的诊疗经验的重要办法之一便是建立和完善罕见病数据库，使其成为治疗罕见病的重要依据，同时为相关药物研究赋能。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">假肥大型进行肌营养不良症（BMD）李虹在接受《21世纪商业评论》的采访时曾分享过，二十多年前，他在北医三院看专家号时，有十多个实习生来围观他这个“难得的病例”。被围观的他也并不觉得有多难堪，反而认为这可以让更多的人认识罕见病、帮助其他患者的确诊。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">如果可以帮助到罕见病治疗，有多少罕见病患者愿意共享自己的数据？</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">欧洲稀有疾病研究针对研究和医疗环境中患者和家庭对数据共享和数据保护的看法开展了一项调查，对2005名罕见病患者或其家属进行了调研，调查报告显示，罕见病患者及其家人普遍支持数据共享，在尊重和保护他们的隐私和、选择和关于数据使用的信息需求的前提下，如果是为了罕见病患者的利益，几乎所有的被调查者都愿意提供他们自己或他们所关心的人的健康数据可用于研究目的。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center">
+        <div style="width:46%;height:100%">
+            <div id="container" style="height: 500%"></div>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+            <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+            <script type="text/javascript">
+                var dom = document.getElementById("container");
+                var myChart = echarts.init(dom);
+                var app = {};
+                option = null;
+                option = null;
+                var option = {
 
-
-        <div id="container6" style="height: 400%;width:100%;"></div>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
-        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
-        <script type="text/javascript">
-            var dom = document.getElementById("container6");
-            var myChart6 = echarts.init(dom);
-            var app = {};
-            option = null;
-            var option = {
-                tooltip: {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b} : {c} ({d}%)"
-                },
-                legend: {
-                    x: 'center',
-                    y: 'bottom',
-                    data: ['未听说过', '不太了解', '有一定了解', '比较了解', '非常了解', '0个', '1-5个', '6-10个', '11-50个', '51-100个', '100以上']
-                },
-                itemWidth: 1,
-                backgroundColor: 'white',
-                color: ['#9BA694 ', ' #917E7E  ', '  #D9AC84', '  #BFBFBF', '#F59176'],
-                dataset: {
-                    source: [
-                        ['title', '受访医生对罕见病的了解程度', '受访医生2017年接诊罕见病数量'],
-                    ]
-                },
-                series: [{
-                    name: '了解程度',
-                    type: 'pie',
-                    radius: 80,
-                    center: ['35%', '50%'],
-                    data: [{
-                        value: 3,
-                        name: '未听说过'
+                    title: [{
+                        text: '几乎所有被调查者都愿意为了罕见病患者的利益而共享数据',
+                        top: '1%',
+                        x: 'center',
                     }, {
-                        value: 95,
-                        name: '不太了解'
+                        subtext: '数据来源：欧洲稀有疾病研究所',
+                        bottom: '6%',
+                        x: 'center',
+                        subtextStyle: {
+                            color: '#757777'
+                        },
                     }, {
-                        value: 119,
-                        name: '有一定了解'
-                    }, {
-                        value: 50,
-                        name: '比较了解'
-                    }, {
-                        value: 18,
-                        name: '非常了解'
-                    }, ]
-
-                }, {
-                    name: '接诊罕见病数量',
-                    type: 'pie',
-                    radius: 80,
-                    center: ['65%', '50%'],
-
-                    data: [{
-                        value: 22,
-                        name: '100以上'
-                    }, {
-                        value: 14,
-                        name: '51-100个'
-                    }, {
-                        value: 39,
-                        name: '11-50个'
-                    }, {
-                        value: 19,
-                        name: '6-10个'
-                    }, {
-                        value: 65,
-                        name: '1-5个'
-                    }, {
-                        value: 37,
-                        name: '0个'
+                        subtext: '注：该调研开展于2018年3月至5月，调研对象是患有罕见疾病的患者或16岁以上的家庭成员（父母和近亲），共计有效人数2113人。',
+                        bottom: '3%',
+                        x: 'center',
+                        subtextStyle: {
+                            color: '#757777'
+                        },
                     }, ],
-                    encode: {
-                        itemName: 'product',
-                        value: '受访医生2017年接诊罕见病数量'
-                    }
-                }]
-            };;
-            if (option && typeof option === "object") {
-                myChart6.setOption(option, true);
-            }
-        </script>
 
-    </div>
+                    tooltip: {},
+                    radar: {
+                        radius: '65%',
+                        splitNumber: 5,
+                        axisLine: {
+                            lineStyle: {
+                                color: '#3a3a3a',
+                                opacity: .2
+                            }
+                        },
+                        splitLine: {
+                            lineStyle: {
+                                color: '#3a3a3a',
+                                opacity: .2
+                            }
+                        },
+                        splitArea: {
+                            areaStyle: {
+                                color: '#fff',
+                                opacity: 1,
+                                shadowBlur: 45,
+                                shadowColor: 'rgba(0,0,0,.1)',
+                                shadowOffsetX: 0,
+                                shadowOffsetY: 5,
+                            }
+                        },
+                        indicator: [{
+                            name: '了解疾病的机制和原因',
+                            max: 100
+                        }, {
+                            name: '研发新的治疗方法',
+                            max: 100
+                        }, {
+                            name: '提高对疾病或疑似疾病的诊断',
+                            max: 100
+                        }, {
+                            name: '收到关于护理的额外的专家意见',
+                            max: 100
+                        }, {
+                            name: '改善对其他疾病的研究和护理',
+                            max: 100
+                        }, {
+                            name: '从事与医学无关的研究',
+                            max: 100
+                        }]
+                    },
+                    series: [{
+                        name: '为以下目的共享数据的意愿（100最高）：',
+                        type: 'radar',
+                        symbolSize: 0,
+                        areaStyle: {
+                            normal: {
+                                shadowBlur: 100,
+                                shadowColor: 'rgba(0,0,0,.1)',
+                                shadowOffsetX: 0,
+                                shadowOffsetY: 10,
+                                opacity: 1
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                color: "rgba(237,111,76,1)",
+                                width: 2
+                            }
+                        },
+                        data: [{
+                            value: [97, 97, 97, 95, 90, 51],
+                            name: '为以下目的共享数据的意愿（最高为100）',
+                        }, ]
+                    }],
+                    color: ["rgba(237,111,76,.6)", ],
+                    backgroundColor: '#ffffff'
+                };;
+                if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }
+            </script>
 
-    <p style="text-align:center ">
-        <font size="3 " color="#C4C4C4 " face="微软雅黑 ">数据来源:病痛挑战基金会《2018罕见病调研报告》</font>
-    </p>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">但这或许并不能成为指责医生业务水平低下的理由。毕竟罕见病病种多、发病率低、患者分布不集中，对绝大多数医生而言，没有足够的病例让他们学会如何诊断、治疗罕见病。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">在罕见病领域，会治罕见病的医生比罕见病还要罕见。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">假肥大型进行肌营养不良症（BMD）李虹在接受《21世纪商业评论》的采访时曾分享过，二十多年前，他在北医三院看专家号时，有十多个实习生来围观他这个“难得的病例”。被围观的他也并不觉得有多难堪，反而认为这可以让更多的人认识罕见病、帮助其他患者的确诊。</div>
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div style="text-align:justify;">
-                    <div style="width:100%;height: 60px; margin:auto">
-                        <div style="float: left;margin:auto">
-                            <table style="height:45px;border-color:slategray;border-left-style:solid;border-width:8px">
-                                <tr>
-                                    <td valign="top"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div style="float: letf;margin:20px auto;height: 45px;">
-                            <p class="text-black align-left ">
-                                <font size="5">&nbsp;不同用途下罕见病患者共享数据意愿</font>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">如果可以帮助到罕见病治疗，有多少罕见病患者愿意共享自己的数据？</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">欧洲稀有疾病研究针对研究和医疗环境中患者和家庭对数据共享和数据保护的看法开展了一项调查，对2005名罕见病患者或其家属进行了调研，调查报告显示，罕见病患者及其家人普遍支持数据共享，在尊重和保护他们的隐私和、选择和关于数据使用的信息需求的前提下，如果是为了罕见病患者的利益，几乎所有的被调查者都愿意提供他们自己或他们所关心的人的健康数据可用于研究目的。</div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <p style="text-align:center ">
-        <font size="4 "><b>不同用途下罕见病患者共享数据意愿</b></font>
-    </p>
     <div align="center">
-
-        <div id="container13" style="height: 400%;width:62%;"></div>
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">受益于罕见病患者的配合，许多国家和地区都开始着手收集患者数据并建立罕见病数据库，为罕见病的研究、医生的学习、药物的研发以及患者的治愈补充了重要的参考资料。 </div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">美国罕见病数据库覆盖的病种数已达<b>9631</b>。全球规模最大的罕见病数据库欧盟Orphanet成立于<b>1997年</b>，到2019年10月，已收录<b>6172种</b>罕见病、<b>5454</b>个相关基因以及<b>8497</b>个专家中心等资料。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">在我国，罕见病数据收集工作开始较晚。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">2016年12月，由北京协和医院负责建设的国家级罕见病在线注册登记平台<b>NRDRS系统项目</b>建设正式启动。2017年7月，该系统正式上线。到2018年9月，有<b>104种</b>罕见病完成在线登记。
+                    </div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;"><b>2019年2月，国家卫健委正式宣布建立全国罕见病诊疗协作网。</b>在全国范围内遴选324家罕见病诊疗能力较强、诊疗病例较多的医院。其中包括1家国家级牵头医院、32家省级牵头医院和291家协作网成员医院。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">借助协作网，我国罕见病患者登记制度在慢慢建立。各协作网成员医院及时将诊治的罕见病患者相关信息录入登记系统，并做好数据定期统计分析工作。目前NRDRS系统已统计<b>43600</b>个病例，涵盖<b>159</b>个疾病表单。 </div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">建立诊疗网的另一个目的，是完善协作网医院之间双向转诊、专家巡诊、远程会诊的相关标准和管理制度，有利于充分发挥优质医疗资源辐射带动作用，提高我国罕见病综合诊疗能力。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">数据库和诊疗网的建立也为患者提供了可靠的就医选择，使他们能少走弯路，减少误诊的几率。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div style="width:46%;height: 20rem; margin:auto">
+        <div id="container3" style="height: 100%"></div>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
@@ -454,167 +764,10 @@
         <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
         <script type="text/javascript">
-            var dom = document.getElementById("container13");
-            var myChart13 = echarts.init(dom);
+            var dom = document.getElementById("container3");
+            var myChart3 = echarts.init(dom);
             var app = {};
             option = null;
-            var data = {
-                value: 24.2,
-                text: '-',
-                color: ['#D97E7E', '#f4956c', ' #D9AC84', ' #FFA694'],
-                xAxis: ['研究疾病成因', '研究治疗方法', '促进疾病诊断', '医学无关的研究'],
-                values: ['97', '97', '97', '51'],
-            }
-
-            var seriesData = []
-            var titleData = []
-            data.values.forEach(function(item, index) {
-                titleData.push({
-                    text: '%' + '\n\n\n\n' + data.xAxis[index],
-                    left: 22 * (index + 1) - .5 + '%',
-                    top: '52%',
-                    textAlign: 'center',
-                    textStyle: {
-                        fontSize: '16',
-                        color: 'black',
-                        fontWeight: '400',
-                    },
-                })
-                seriesData.push({
-                    type: 'pie',
-                    radius: ['65', '68'],
-                    center: [22 * (index + 1) + '%', '50%'],
-                    hoverAnimation: false,
-                    label: {
-                        normal: {
-                            position: 'center'
-                        },
-                    },
-                    data: [{
-                        value: item,
-                        name: data.text,
-                        itemStyle: {
-                            normal: {
-                                color: data.color[index],
-                            }
-                        },
-                        label: {
-                            normal: {
-                                show: false,
-                            }
-                        }
-                    }, {
-                        value: 100 - item,
-                        name: '占位',
-                        tooltip: {
-                            show: false
-                        },
-                        itemStyle: {
-                            normal: {
-                                color: '#edf1f4',
-                            }
-                        },
-                        label: {
-                            normal: {
-                                formatter: item,
-                                textStyle: {
-                                    fontSize: 36,
-                                    color: 'black',
-                                }
-                            },
-
-                        }
-                    }]
-                })
-            })
-
-            let value = data.value || 0
-            option = {
-                backgroundColor: 'white',
-                title: titleData,
-                series: seriesData,
-                grid: {
-                    top: "30px",
-                    left: "45px",
-                    right: "0",
-                    bottom: "39px"
-                }
-            };
-            if (option && typeof option === "object") {
-                myChart13.setOption(option, true);
-            }
-        </script>
-    </div>
-    <p style="text-align:center ">
-        <font size="3 " color="#C4C4C4 " face="微软雅黑 ">数据来源：欧洲稀有疾病研究所</font>
-    </p>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">受益于罕见病患者的配合，许多国家和地区都开始着手收集患者数据并建立罕见病数据库，为罕见病的研究、医生的学习、药物的研发以及患者的治愈补充了重要的参考资料。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">美国罕见病数据库覆盖的病种数已达9631。全球规模最大的罕见病数据库欧盟Orphanet成立于1997年，到2019年10月，已收录6172种罕见病、5454个相关基因以及8497个专家中心等资料。</div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div style="text-align:justify;">
-                    <div style="width:100%;height: 60px; margin:auto">
-                        <div style="float: left;margin:auto">
-                            <table style="height:45px;border-color:slategray;border-left-style:solid;border-width:8px">
-                                <tr>
-                                    <td valign="top"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div style="float: letf;margin:20px auto;height: 45px;">
-                            <p class="text-black align-left ">
-                                <font size="5">&nbsp;我国数据收集情况</font>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">在我国，罕见病数据收集工作开始较晚。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">2016年12月，由北京协和医院负责建设的国家级罕见病在线注册登记平台NRDRS系统项目建设正式启动。2017年7月，该系统正式上线。到2018年9月，有104种罕见病完成在线登记。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">2019年2月，国家卫健委正式宣布建立全国罕见病诊疗协作网。在全国范围内遴选324家罕见病诊疗能力较强、诊疗病例较多的医院。其中包括1家国家级牵头医院、32家省级牵头医院和291家协作网成员医院。</div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="width:50%;height: 500px; margin:auto">
-        <div id="container41" style="height: 100%"></div>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
-        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
-        <script type="text/javascript">
-            var dom = document.getElementById("container41");
-            var myChart41 = echarts.init(dom);
-            var app = {};
             option = null;
 
             var data = [{
@@ -1939,6 +2092,19 @@
                 }
             }
             option = {
+                title: [{
+                    text: '全国罕见病诊疗协作网-医院地图',
+                    top: '1%',
+                    x: 'center',
+                }, {
+                    subtext: '数据来源：国家卫生健康委、百度地图',
+                    bottom: '3%',
+                    x: 'center',
+                    subtextStyle: {
+                        color: '#757777'
+                    },
+
+                }, ],
                 tooltip: {
                     trigger: 'item'
                 },
@@ -2129,107 +2295,110 @@
                 }]
             };;
             if (option && typeof option === "object") {
-                myChart41.setOption(option, true);
+                myChart3.setOption(option, true);
             }
         </script>
     </div>
-    <p style="text-align:center">
-        <font size="3" color="#C4C4C4" face="微软雅黑">数据来源：国家卫健委、百度地图</font>
-    </p>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">借助协作网，我国罕见病患者登记制度在慢慢建立。各协作网成员医院及时将诊治的罕见病患者相关信息录入登记系统，并做好数据定期统计分析工作。目前NRDRS系统已统计43600个病例，涵盖159个疾病表单。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">建立诊疗网的另一个目的，是完善协作网医院之间双向转诊、专家巡诊、远程会诊的相关标准和管理制度，有利于充分发挥优质医疗资源辐射带动作用，提高我国罕见病综合诊疗能力。同时也为患者提供了可靠的就医选择，使他们能少走弯路，减少误诊的几率。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">希望数据库和诊疗网能为罕见病患者带来早日确诊的希望。</div>
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div id="ab" align="center">
+        <font face="宋体" size="10rem">
+            <p style="padding-top: 4rem;">
+                <b>药篇</b>
+            </p>
+        </font>
+        <div style="width:12%; border:3px solid rgb(228, 77, 7);"></div>
     </div>
-    <p></p>
-    <!-- Projects Section -->
-    <header class="masthead">
-        <div id="im" class="container d-flex h-100 align-items-center">
-            <div class="mx-auto text-center">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div style="text-align:justify;">
-                                <p class="text-white align-left ">
-                                    <font size="5">
-                                        在漫长、反复、费用高昂的确诊之路上，患者一方面承受着身体痛苦的折磨，另一方面又忍受着精神上的煎熬，希望快点找到自己生病的原因、早日治愈，却又害怕确诊后自己陷入更绝望的境地。
-                                    </font>
-                                </p>
-                                <p class="text-white align-left">
-                                    <font size="5">罕见病患者的恐惧并非杞人忧天。目前国际确认的罕见病有近7000种，但只有不到5%的罕见病有治疗方法，能够被治愈的罕见病是零。</font>
-                                </p>
-                            </div>>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <h1></h1>
-
-
-    <!-- Featured Project Row -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div style="text-align:justify;">
-                    <div style="width:100%;height: 60px; margin:auto">
-                        <div style="float: left;margin:auto">
-                            <table style="height:45px;border-color:slategray;border-left-style:solid;border-width:8px">
-                                <tr>
-                                    <td valign="top"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div style="float: letf;margin:20px auto;height: 45px;">
-                            <p class="text-black align-left ">
-                                <font size="5">&nbsp;双重困境：无药可医、望药兴叹</font>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <p class="text-black align-left ">
-                            <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">七色堇罕见病联盟创始人欧阳笠把我国的罕见病患者分为三类：第一类是无药可医的患者，对他们来说，确诊只能帮助他们避免没完没了的误诊，以及找到同病相怜的患者抱团取暖。第二类是国外有药，国内未批准上市的患者，昂贵的进口药价，让许多患者只能望“药”兴叹，等待“药神”出现。第三类是国内有药可医，甚至已经纳入医保的患者；但因为药占比、采购限价、地域限制等原因，用药无法保障，此类患者也可能惨遭“断药”。</div>
-                        </p>
-                        <p class="text-black align-left ">
-                            <p class="text-black align-left ">
-                                <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">在《第一批罕见病目录》确认的121种罕见病中，无药可医的有47种，“境外有药，境内无药”的有21种，国内有药可医且全部或部分纳入医保的有40种，国内有药可医但没纳入医保的有13种。（注：数据来源于2019年2月28日发布的《2019中国罕见病药物可及性报告》，报告发布后药物的调整未被统计在内）</div>
-                            </p>
-                            <p class="text-black align-left ">
-                                <p class="text-black align-left ">
-                                    <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">由于罕见病的发病率极低，人数少，药企在研发药物成功后想要回收成本，在定价上必然要抬高。对于一些罕见病而言，仅药物一项最高可达一年数百万金额。如果没有医保，患者根本无法承受如此高昂的价格。有药医，没钱治，比无药可医更让人难以承受。</div>
-                                </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <p style="text-align:center ">
-        <font size="4"><b>未被纳入医保的罕见病治疗费用</b></font>
-    </p>
     <div align="center">
-
-        <body style="height: 400%;width:60%;margin: 0">
-            <div id="container" style="height: 400%;width:60%"></div>
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">七色堇罕见病联盟创始人欧阳笠把我国的罕见病患者分为三类：第一类是无药可医的患者，第二类是“国外有药，国内无药”，第三类是国内有药可医，甚至药物已经纳入医保的罕见病。 </div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:1.6rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">无药可医</font>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">截至2018年12月，在我国发布的《第一批罕见病目录》确认的121种罕见病中，有47种罕见病目前“无药可医”。对他们来说，<b>确诊只能帮助他们避免没完没了的误诊，以及找到同病相怜的患者抱团取暖。</b></div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:2.2rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">境外有药，境内无药</font>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">有74种是“有药可治”的。在“有药可治”的罕见病中，仍有9种罕见病的21种药物面临着“境外有药，境内无药”的困局。这种药物只能依靠进口，但是昂贵的进口药价，让许多患者只能望“药”兴叹，期盼着“药神”出现。</b>
+                    </div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">此外，“有药可治”的罕见病中仍有22 种罕见病涉及的20种药物虽然在中国上市，但却没有注册相应罕见病适应症。这意味着它们在原则上并不能被用于治疗这 22 种罕见病。由于缺乏相应的药物，患者往往只能选择相似的治疗方案及其他相似药物，即使这些药物的效果未必如意，但却成为患者们仅余的维生命脉。</b>
+                    </div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:1.6rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">药贵而“可望不可及”</font>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">目前已经在中国上市且有罕见病适应症的55种药物中，有<b>29</b>种药物被纳入国家医保目录，涉及<b>18</b>种罕见病。这29种药物中，有<b>9</b>种享受国家医保目录甲类报销，用于治疗<b>11</b>种罕见病适应症，患者使用时无需自付。但是仍有<b>13</b>种罕见病缺乏医保支付，高昂的治疗费用让患者面临另一种“无药可治”。这13种罕见病在我国约影响<b>23万</b>名患者，大部分人需要终生用药治疗。这些疾病中有11种 药物的年治疗费用大于8万元人民币，有的甚至高达近<b>500万</b>元，在没有医保支付的情况下，患者难以维持长期足量和足疗程的治疗。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center">
+        <div style="width:46%;height:100%">
+            <div id="container4" style="height: 450%;width:100%"></div>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
@@ -2239,22 +2408,61 @@
             <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
             <script type="text/javascript">
-                var dom = document.getElementById("container");
-                var myChart = echarts.init(dom);
+                var dom = document.getElementById("container4");
+                var myChart4 = echarts.init(dom);
                 var app = {};
                 option = null;
                 option = {
+                    backgroundColor: '#ffffff',
+                    grid: {
+                        left: '5%',
+                        right: '5%',
+                        top: '15%',
+                        bottom: '13%',
+
+                        containLabel: true
+                    },
+                    title: [{
+                        text: '国内已批准上市但未被纳入医保目录的13种罕见病',
+                        top: '1%',
+                        x: 'center',
+                    }, {
+                        text: '相关药品年治疗费用统计（单位：元）',
+                        top: '5%',
+                        x: 'center',
+                    }, {
+                        subtext: '数据来源：罕见病发展中心、IQVIA《中国罕见病药物可及性报告2019》',
+                        bottom: '7%',
+                        x: 'center',
+                        subtextStyle: {
+                            color: '#757777'
+                        },
+                    }, {
+                        subtext: '注：以药品终端销售价格为计算依据；儿童治疗体重按照 10kg 计算，成人治疗体重按照 50kg 计算;',
+                        bottom: '4%',
+                        x: 'center',
+                        subtextStyle: {
+                            color: '#757777'
+                        },
+                    }, {
+                        subtext: '    2019年2月28日报告发布后的药物调整未被统计在内。',
+                        bottom: '1%',
+                        x: 'center',
+                        subtextStyle: {
+                            color: '#757777'
+                        },
+                    }, ],
                     tooltip: {
                         trigger: 'axis',
                         axisPointer: {
                             type: 'none'
                         },
                         formatter: function(params) {
-                            return params[0].name + ': ' + params[0].value;
+                            return params[0].name + ': ' + params[0].value + 'k';
                         }
                     },
                     xAxis: {
-                        data: ['依库珠单抗', '依库珠单抗', '伊米苷酶', '司莱帕格', '阿糖苷酶α', '马昔腾坦', '麦格司他', '曲前列尼尔', '沙丙喋呤', '伊洛前列素', '利奥西呱', '安利生坦', '波生坦', '非格司亭', '左卡尼汀', '生物素', '胆汁酸', '葡萄糖酸酶'],
+                        data: ['依库珠单抗', '伊米苷酶', '司来帕格', '阿糖苷酶α', '马昔腾坦', '麦格司他', '曲前列尼尔', '沙丙蝶呤', '沙丙蝶呤', '伊洛前列素', '利奥西呱', '安立生坦', '波生坦', '非格司亭', '左卡尼汀', '生物素', '胆汁酸', '葡萄糖酸镁'],
                         axisTick: {
                             show: false
                         },
@@ -2277,7 +2485,9 @@
                             show: false
                         },
                         axisLabel: {
-                            show: true
+                            show: true,
+                            formatter: '{value} k',
+                            margin: 24,
                         },
                     },
                     color: ['#f4956c'],
@@ -2298,10 +2508,11 @@
                         label: {
                             normal: {
                                 position: 'top',
-                                show: false
+                                show: true,
+                                formatter: '{c}k'
                             }
                         },
-                        data: [4880218, 3660211, 3219947, 3162994, 2943464, 413824, 312857, 278490, 205936, 191584, 168180, 81597, 56802, 45457, 41539, 1049, 200, 189],
+                        data: [4880, 3220, 3163, 2943, 414, 313, 278, 206, 206, 192, 168, 82, 57, 45, 42, 1, 0.2, 0.2],
                         z: 18
                     }, {
                         name: 'glyph',
@@ -2311,82 +2522,103 @@
                         symbolSize: 50,
                         symbolOffset: [0, '-120%'],
                     }]
-                };
-
-                ;
+                };;
                 if (option && typeof option === "object") {
-                    myChart.setOption(option, true);
+                    myChart4.setOption(option, true);
                 }
             </script>
-        </body>
+        </div>
     </div>
-    <p style="text-align:center ">
-        <font size="3 " color="#C4C4C4 " face="微软雅黑 ">数据来源：《中国罕见病药物可及性报告2019版》</font>
-    </p>
-    <!-- Project One Row -->
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">便宜药也面临着风险。还是因为患病人数少，企业的生产积极性不高，国内从事某一罕见病药品生产的企业可能只有寥寥几家，一旦企业进行经营调整，暂停了生产链条，罕见病患者就会陷入断药困境中。</div>
-                    </p>
-                </div>
+    <div align="center">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">由于罕见病的发病率极低，人数少，药企在研发药物成功后想要回收成本，在定价上必然要抬高。<b>但这些高昂价格的药物，对患者来说，就如同“水中的月亮”，可望而不可及，这是比无药可治更让人痛苦的事情。</b></div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">当然，在未纳入医保的罕见病药物中也有相对来说的便宜药，年治疗费用在20万元以下，甚至有的低达189元。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">便宜药也面临着风险。还是因为患病人数少，企业的生产积极性不高，国内从事某一罕见病药品生产的企业可能只有寥寥几家，一旦企业进行经营调整，暂停了生产链条，罕见病患者就面临着随时“断药”的威胁。</div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:1.6rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">新孤儿药相关政策带来新希望</font>
+                </p>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div style="text-align:justify;">
-                    <div style="width:100%;height: 60px; margin:auto">
-                        <div style="float: left;margin:auto">
-                            <table style="height:45px;border-color:slategray;border-left-style:solid;border-width:8px">
-                                <tr>
-                                    <td valign="top"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div style="float: letf;margin:20px auto;height: 45px;">
-                            <p class="text-black align-left ">
-                                <font size="5">&nbsp;新政策带来希望</font>
-                            </p>
-                        </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">让罕见病患者们欣慰的是，今年频频有好消息传来。新出台了许多罕见病药物相关政策，为他们带来了新希望。
                     </div>
-                </div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">2月11日，国务院会议决定，从3月1日起，对首批21个罕见病药品和4个原料药，参照抗癌药对进口环节减税，按3％征收增值税，国内环节可选择按3％简易办法计征增值税。
+                    </div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">6月20日，国家卫健委公示第一批鼓励仿制药品目录建议清单，共34个药品，囊括了多种抗癌药、传染病药物、罕见病药物，以及此前曾出现过短缺的药物。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">8月22日，《药品管理法(修订草案)》提请第十三届全国人大常委会第十二次会议审议，再度关注药品的网络销售，其中提出，对罕见病等疾病的新药、儿童用药品予以优先审评审批。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">11月28日公布的《2019年国家医保谈判准入药品名单》里，有9个罕见病方面的新增药品，两个续约药品。等到明年一月，新版目录正式实施后，患者的治疗费用便能有所下降。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">尽管罕见病患者仍然面临诸多难题，但正如国家卫生健康委药物政司副司长张锋所说：“如今已至‘夏天’，我国罕见病领域已有诸多政策开始发挥它温暖的效应。” 期待每位罕见病患者都“有药好用”的那一天。
+                    </div>
+                </p>
+            </font>
+        </div>
+    </div>
+    <div align="center" style="padding-top:1.6rem">
+        <div style="text-align:left;width:46%;margin:auto;">
+            <div style="float: left;margin-top: 0.4rem;">
+                <table style="height:1.5rem;border-color:rgb(228, 77, 7);border-left-style:solid;border-width:0.2rem;">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin:auto 0.5rem;height: 2rem;">
+                <p class="text-black align-left ">
+                    <font size="5.5rem" face="宋体">让爱不罕见</font>
+                </p>
             </div>
         </div>
     </div>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-lg-8 mx-auto ">
-                <div style="text-align:justify;">
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">让罕见病患者们欣慰的是，今年频频有好消息传来。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">2月11日，国务院会议决定，从3月1日起，对首批21个罕见病药品和4个原料药，参照抗癌药对进口环节减按3％征收增值税，国内环节可选择按3％简易办法计征增值税。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">6月20日，国家卫健委公示第一批鼓励仿制药品目录建议清单，共34个药品，囊括了多种抗癌药、传染病药物、罕见病药物，以及此前曾出现过短缺的药物。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">8月22日，《药品管理法(修订草案)》提请第十三届全国人大常委会第十二次会议审议，再度关注药品的网络销售，其中提出，对罕见病等疾病的新药、儿童用药品予以优先审评审批。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">11月28日公布的《2019年国家医保谈判准入药品名单》里，有9个罕见病方面的新增药品，两个续约药品。等到明年一月，新版目录正式实施后，患者的治疗费用便能有所下降。</div>
-                    </p>
-                    <p class="text-black align-left ">
-                        <div style="line-height: 28px;letter-spacing:2px;margin:30px auto;">期待每位罕见病患者都“有药好用”的那一天。</div>
-                    </p>
-                </div>
-            </div>
+    <div align="center" style="padding-top:0.2rem">
+        <div style="text-align:justify;width:46%;">
+            <font face="宋体">
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">当前，中国罕见病患者的治愈之路还很长，需要政府、组织、企业、个人以及患者自身的持续关注和努力。除了出台政策外，患者团结起来，病友组织发挥纽带作用，医生加强对罕见病相关知识的学习，药企加快研发，普通民众倾注关怀，各方通力合作，共同战斗，罕见病患者不再是“孤儿”，哪怕微小但依然追光闪耀。</div>
+                </p>
+                <p class="text-black align-left " style="padding-top: 0.2rem;">
+                    <div style="line-height: 1.8rem;letter-spacing:0.2rem;margin:auto;">健康中国，一个都不能少！ </div>
+                </p>
+            </font>
         </div>
     </div>
     <h1></h1>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <div style="text-align:center "><img src="img/33.png " width="1380" height="268" /></div>
+    <div style="text-align:center "><img src="img/33.png " width="100%" height="30%" /></div>
     <!-- Contact Section -->
 
     <!-- Footer -->
